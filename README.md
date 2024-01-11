@@ -481,6 +481,8 @@ To build a computer cluster, the individual nodes should be connected to a netwo
 
 Typically, at least one node is designated as the leader node and acts as the entry point to the cluster. The leader node may be responsible for delegating incoming work to the other nodes and, if necessary, aggregating the results and returning a response to the user.
 
+Cluster uses a gossip protocol for nodes to exchange information about the cluster. Each node periodically pings other nodes to check their availability. If a master node fails, one of its replicas is promoted to a master, and the cluster is reconfigured. The reconfiguration process is automatic and helps maintain high availability.
+
 Ideally, a cluster functions as if it were a single system. A user accessing the cluster should not need to know whether the system is a cluster or an individual machine. Furthermore, a cluster should be designed to minimize latency and prevent bottlenecks in node-to-node communication.
 
 ## Types
@@ -736,7 +738,7 @@ There are two types of proxies:
 
 ### Forward Proxy
 
-A forward proxy, often called a proxy, proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
+A forward proxy, often called a proxy, proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman. e.g used in corporate offices to restrict access to certain sites.
 
 ![forward-proxy](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/proxy/forward-proxy.png)
 
