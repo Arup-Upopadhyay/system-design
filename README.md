@@ -838,13 +838,13 @@ For example, if both `Foo` and `Bar` each had 99.9% availability, their total av
 
 ## Availability vs Reliability
 
-If a system is reliable, it is available. However, if it is available, it is not necessarily reliable. In other words, high reliability contributes to high availability, but it is possible to achieve high availability even with an unreliable system.
+If a system is reliable, it is available. However, if it is available, it is not necessarily reliable. In other words, high reliability contributes to high availability, but it is possible to achieve high availability even with an unreliable system. e.g There can be data issues even though the system is available.
 
 ## High availability vs Fault Tolerance
 
-Both high availability and fault tolerance apply to methods for providing high uptime levels. However, they accomplish the objective differently.
+Both high availability and fault tolerance are methods for achieving high uptime, but they approach this goal differently.
 
-A fault-tolerant system has no service interruption but a significantly higher cost, while a highly available system has minimal service interruption. Fault-tolerance requires full hardware redundancy as if the main system fails, with no loss in uptime, another system should take over.
+A fault-tolerant system guarantees uninterrupted service but comes at a significantly higher cost. In contrast, a highly available system aims for minimal service interruption. Fault tolerance requires full hardware redundancy to ensure that another system seamlessly takes over if the main system fails, thereby maintaining zero downtime.
 
 # Scalability
 
